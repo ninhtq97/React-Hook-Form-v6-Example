@@ -168,7 +168,6 @@ const YourComponent: FC<{}> = () => {
       />
 
       {tasks.data.map((e) => (
-        /* Controller on version 6 */
         <Controller
           key={e.id}
           name={e.id}
