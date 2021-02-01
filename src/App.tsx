@@ -121,6 +121,8 @@ const YourComponent: FC<{}> = () => {
 
   const handleCache = (id: string) => {
     try {
+      console.log('Id:', id);
+
       actions.cacheSelect({
         page: tasks.meta.page,
         size: tasks.data.length,
@@ -177,9 +179,8 @@ const YourComponent: FC<{}> = () => {
             return (
               <Checkbox
                 name={props.name}
-                defaultChecked={selectedItem?.rowIds.includes(e.id)}
+                defaultChecked={props.value}
                 label={e.name}
-                ref={props.ref}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   const checked = e.target.checked;
 
